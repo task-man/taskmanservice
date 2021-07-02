@@ -6,6 +6,9 @@ const auth = require('../middleware/auth')
 const { sendWelcomeEmail, sendCancellationEmail } = require('../emails/account')
 const router = new express.Router()
 
+router.get('', (req, res) => {
+    res.send('Welcome to the Task Manager App- API')
+})
 
 router.post('/users', async (req, res) => {
     const user = new User(req.body)
