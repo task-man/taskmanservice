@@ -5,9 +5,9 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 const sendWelcomeEmail = (email, name) => {
     sgMail.send({
         to: email,
-        from: 'umesh.khunt@gmail.com',
+        from: 'taskmanager222@gmail.com',
         subject: 'Thanks for joining in!',
-        text: `Welcome to the app, ${name}. Let me know how you get along with the app.`
+        text: `Welcome to the TaskMan app, ${name}. Let me know how you get along with the TaskMan app.`
     }).then(() => {
         console.log('Email sent')
     }).catch((error) => {
@@ -18,8 +18,8 @@ const sendWelcomeEmail = (email, name) => {
 const sendCancellationEmail = (email, name) => {
     sgMail.send({
         to: email,
-        from: 'umesh.khunt@gmail.com',
-        subject: 'Good Bye From Task App!',
+        from: 'taskmanager222@gmail.com',
+        subject: 'Good Bye From TaskMan App!',
         text: `Goodbye, ${name}. Sorry to see you leave our app. I hope to see you back sometime soon.`
     }).then(() => {
         console.log('Email sent')
